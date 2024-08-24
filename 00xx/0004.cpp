@@ -1,23 +1,26 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int main(){
-  string s;
-  cin>>s;
-  int C=-1,c=-1;
 
-  for(auto i:s)
-  {
-    if('A'<=i && i<='Z') C=1;
-    if('a'<=i && i<='z') c=1;
-  }
+main(){
 
-  if((C==1)&&(c==1)) cout<<"Mix";
-  else
-  {
-    if(C==1) cout<<"All Capital Letter";
-    if(c==1) cout<<"All Small Letter";
-  }
+    string s;
+    cin>>s;
 
-    return 0 ;
+    bool upper = false, lower = false;
 
+    for(auto i:s)
+    {
+        if('A'<=i && i<='Z') upper = true;
+        if('a'<=i && i<='z') lower = true;
+    }
+
+
+    if(upper && lower) cout<<"Mix";
+    else
+    {
+        if(upper) cout<<"All Capital Letter";
+        if(lower) cout<<"All Small Letter";
+    }
+
+    return 0;
 }

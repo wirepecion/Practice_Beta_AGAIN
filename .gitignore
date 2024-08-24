@@ -1,6 +1,9 @@
 # Ignore all .exe files
 *.exe
 
+#ignore file type File
+*.File
+
 # Other common ignores
 node_modules/
 *.log
